@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ACTIVITY | 大阪大学応援団</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+
+<body class="activity-page">
+    <a href="index.html" class="archive-home" aria-label="ホームのトップへ戻る">大阪大学応援団</a>
+
+
+    
+
+    <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="メニューを開く"
+    >
+        ☰
+    </button>
+
+
+    <nav class="menu" id="menu" aria-label="サイトメニュー">
+        <a href="index.html">HOME</a>
+        <div class="menu-group">
+            <button class="menu-submenu-toggle" type="button" aria-expanded="false" aria-controls="aboutSubmenu">ABOUT <span aria-hidden="true">＋</span></button>
+            <div class="menu-submenu" id="aboutSubmenu" hidden>
+                <a href="about.html">ABOUT</a>
+                <a href="leader.html">LEADER</a>
+                <a href="cheer.html">CHEER LEADER</a>
+                <a href="band.html">BAND</a>
+            </div>
+        </div>
+        <a href="member.html">MEMBER</a>
+        <a href="performance.html">PERFORMANCE</a>
+        <a href="history.html">HISTORY</a>
+        <a href="activity.html">活動記録</a>
+        <a href="welcome.html">新入生・入団希望の皆様へ</a>
+        <a href="links.html">LINKS</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+
+
+    <main>
+
+
+        
+
+        <header class="activity-hero">
+
+            <p class="section-label">
+                ACTIVITY REPORT
+            </p>
+
+            <h1>
+                活動報告
+            </h1>
+
+            <p>
+                三部それぞれの活動紹介とは別に、
+                大阪大学応援団全体の活動をお届けします。
+            </p>
+
+        </header>
+
+
+
+        
+
+        <section
+            class="activity-report-list"
+            aria-labelledby="activity-report-heading"
+        >
+
+            <div class="activity-report-heading">
+
+                <p class="section-label">
+                    REPORTS
+                </p>
+
+                <h2 id="activity-report-heading">
+                    活動の記録
+                </h2>
+
+            </div>
+
+
+            
+
+            <div id="activityReports">
+
+                <div class="activity-report-empty">
+                    <span aria-hidden="true">66</span>
+
+                    <p>
+                        団全体の活動報告を、
+                        こちらに掲載していきます。
+                    </p>
+
+                    <p>
+                        現在、掲載内容を準備しています。
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    
+
+    <section class="activity-admin">
+
+        <button
+            type="button"
+            id="editActivityButton"
+        >
+            編集
+        </button>
+
+    </section>
+
+
+
+    
+
+    <div
+        class="activity-admin-overlay"
+        id="activityAdminOverlay"
+    >
+
+        <div class="activity-admin-panel">
+
+
+            
+
+            <button
+                type="button"
+                class="activity-admin-close"
+                id="activityAdminClose"
+                aria-label="閉じる"
+            >
+                ×
+            </button>
+
+
+
+            
+
+            <div id="activityPasswordArea">
+
+                <p class="section-label">
+                    ADMIN
+                </p>
+
+                <h2>
+                    活動報告を編集
+                </h2>
+
+                <p>
+                    管理者アカウントでログインしてください。
+                </p>
+
+                <input
+                    type="email"
+                    id="activityEmail"
+                    placeholder="メールアドレス"
+                    autocomplete="username"
+                >
+
+
+                <input
+                    type="password"
+                    id="activityPassword"
+                    placeholder="パスワード"
+                    autocomplete="current-password"
+                >
+
+
+                <button
+                    type="button"
+                    id="activityPasswordButton"
+                >
+                    管理画面へ
+                </button>
+
+
+                <p
+                    id="activityPasswordError"
+                    class="activity-admin-error"
+                ></p>
+
+            </div>
+
+
+
+            
+
+            <div
+                id="activityEditorArea"
+                style="display: none;"
+            >
+
+                <button type="button" id="activityAdminLogout">ログアウト</button>
+
+                <p class="section-label">
+                    ADMIN
+                </p>
+
+                <h2>
+                    活動報告を管理
+                </h2>
+
+
+                
+
+                <div class="activity-editor-section">
+
+                    <p class="activity-editor-title">
+                        新しい活動報告
+                    </p>
+
+
+                    <label for="activityTitle">
+                        題名
+                    </label>
+
+                    <input
+                        type="text"
+                        id="activityTitle"
+                        placeholder="活動報告の題名"
+                    >
+
+
+                    <label for="activityThumbnailFile">
+                        サムネイル画像
+                    </label>
+
+                    <input
+                        type="file"
+                        id="activityThumbnailFile"
+                        accept="image/*"
+                    >
+
+                    <p
+                        id="activityThumbnailStatus"
+                        class="activity-admin-message"
+                    ></p>
+
+
+                    <label for="activityBody">
+                        本文
+                    </label>
+
+                    <textarea
+                        id="activityBody"
+                        rows="12"
+                        placeholder="活動報告の本文を入力してください。"
+                    ></textarea>
+
+
+                    <button
+                        type="button"
+                        id="activityPublishButton"
+                    >
+                        公開する
+                    </button>
+
+
+                    <button
+                        type="button"
+                        id="activityCancelEditButton"
+                        style="display: none;"
+                    >
+                        編集をキャンセル
+                    </button>
+
+
+                    <p
+                        id="activityPublishMessage"
+                        class="activity-admin-message"
+                    ></p>
+
+                </div>
+
+
+
+                
+
+                <div class="activity-editor-section">
+
+                    <p class="activity-editor-title">
+                        公開中の記事
+                    </p>
+
+
+                    <div id="activityAdminReports">
+
+                        <p>
+                            読み込み中……
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    
+
+    <footer>
+
+        <p>
+            THE UNIVERSITY OF OSAKA CHEERING PARTY
+        </p>
+
+    </footer>
+
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
+
